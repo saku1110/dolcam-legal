@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Privacy Policy | dolcam</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: Inter, Arial, "Helvetica Neue", sans-serif;
+    line-height: 1.75; color: #15181A; background: #ffffff; margin: 0;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 44px 22px 88px; }
+  h1 { font-size: 1.45rem; margin: 0 0 8px; }
+  .updated { color: #6b7280; font-size: .85rem; margin: 0 0 28px; }
+  h2 { font-size: 1.02rem; margin: 30px 0 8px; }
+  ol, ul { padding-left: 1.3em; margin: 8px 0; }
+  li { margin: 6px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: 10px 0; }
+  th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
+  a { color: #0B7A55; }
+  nav { font-size: .85rem; margin-bottom: 24px; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #15161A; color: #e7e7ea; }
+    .updated { color: #9a9aa2; }
+    a { color: #34E39B; }
+    th, td { border-color: #33353a; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">← Index</a></nav>
+  <h1>dolcam Privacy Policy</h1>
+  <p class="updated">Effective: 2026-10-27 / Last updated: 2026-10-27</p>
+
+<h2>1 Operator and scope</h2>
+<p>桜谷俊輝 handles information in dolcam as described here. The address will be disclosed without delay upon request. Contact <a href="mailto:rebirth.sakuraya@gmail.com">rebirth.sakuraya@gmail.com</a> about information handling or deletion.</p>
+<p>This Policy covers the app and its Faves outline service. Apple and services you share to also apply their own policies to information they handle independently.</p>
+<h2>2 Photos and settings on your device</h2>
+<p>Camera photos, ordinary photo processing, editing, and frame composition are handled on your device. We do not send photos to our servers for those tasks. External processing of Faves photos is the exception described in section 4. User-initiated sharing is described in section 6.</p>
+<p>The app handles the following locally:</p>
+<ul>
+<li>Captured photos and thumbnails.</li>
+<li>Original and corrected photos, with correction settings, capture dates, and other information for re-editing.</li>
+<li>Reduced-size imported Faves photos and outlines, names, shooting settings, shot counts, and last capture dates.</li>
+<li>Saved poses and pose collections, including collection names and usage dates.</li>
+<li>Camera and correction preferences, including your external outline processing choice.</li>
+<li>Paid access status, verification time, and purchase evidence including expiration dates and transaction identifiers.</li>
+<li>First launch date, cumulative successful save count, and dates when the app requested a review dialog.</li>
+<li>Identifiers of poses used for shooting, photo save counts, edited photo save counts, and notification dates scheduled based on the last time you used the app.</li>
+<li>Notification preferences and permission status, counts of permission explanations shown and permissions granted or declined, and notification scheduling and opening counts.</li>
+<li>Onboarding completion status, whether you have previously subscribed, and the number of times you closed the paid plan screen.</li>
+</ul>
+<p>Imported Faves photos are saved as reduced-size images with a longest side of up to 1,024 pixels. The app does not keep its own copy of the full-size imported original. The source image in your photo library is unaffected.</p>
+<p>The iOS photo picker supplies the photos you select. The app does not request permission to read your entire photo library. Exporting requests permission to add photos. Camera access also requires iOS permission. You can manage permissions in iOS Settings.</p>
+<h2>3 Skin correction and face and body detection</h2>
+<p>Skin correction models run on your device. The app temporarily detects facial landmarks and skin regions, and uses body and hand positions for pose guidance. These results support corrections and composition guidance, not identity recognition or authentication.</p>
+<p>The app does not store detection results as a separate face data record. They are updated or released in processing memory. Photos and detection results are not sent externally for skin correction. Saved photos themselves may contain faces.</p>
+<p>The current skin correction path uses detection models bundled with the app. It does not send correction photos to the model provider.</p>
+<h2>4 External processing of Faves photos</h2>
+<h3>Your choice and the image sent</h3>
+<p>The app sends a selected photo for external outline creation only if you choose cleaner outlines. You can choose to create outlines only on this device instead. You can change the choice in the app's settings. A saved choice applies to later imports too. Changing it does not undo past transmissions.</p>
+<p>Before sending, the app places the photo in a 2:3 canvas and creates a JPEG with a longest side of up to 768 pixels. Faces and background details may remain visible. Check that you have the necessary permission to use and send the photo.</p>
+<h3>Transmission to Supabase</h3>
+<p>The app uses Supabase authentication and a relay server. It creates an anonymous account without asking you to register a name or email address. Checking the remaining allowance also involves authentication traffic. “Anonymous” does not mean the server cannot distinguish repeated use under the same ID.</p>
+<p>A generation request to the relay contains the photo, a request identifier, and an authentication token. For paid access, it may also contain Apple-signed purchase evidence with product and transaction identifiers, expiration information, and other transaction details. This verifies allowances and paid access. Purchase evidence is not forwarded to OpenAI with the photo.</p>
+<p>Authentication session credentials are saved in your device's Keychain to reuse the anonymous account. They may remain after you delete the app.</p>
+<h3>Transmission to OpenAI and image retention</h3>
+<p>The relay sends the photo to OpenAI's image editing API with fixed instructions to create a pose outline. The resulting outline is returned to the app. The request to OpenAI does not include your anonymous account ID or any Faves name you enter.</p>
+<p>Our relay application processes photos and outlines in memory. It does not save them in its database or files. Its application logs do not contain images or authentication tokens.</p>
+<p>OpenAI's handling follows its <a href="https://openai.com/policies/services-agreement/">API services agreement</a> and <a href="https://developers.openai.com/api/docs/guides/your-data">data retention policy</a>. Under the standard policy, API data is not used for training unless explicitly shared for that purpose. Abuse monitoring logs are generally retained for up to 30 days, with legal and safety exceptions. Content, including images, suspected of violating usage policies may be retained and reviewed by people. This app's implementation does not disable OpenAI's retention.</p>
+<h3>Records retained on the server</h3>
+<p>The server stores successful generation counts associated with an anonymous account ID. It also stores request identifiers, processing states, start and completion times, and estimated and actual processing costs. These records manage allowances, prevent duplicate execution and excessive use, and control costs.</p>
+<p>Application error logs include error types and request identifiers. They may also include upstream response status and limited error codes. They are not used to log image bodies or purchase evidence.</p>
+<p>Receiving infrastructure also receives network information such as IP addresses. Supabase and OpenAI may process infrastructure logs for security and operations. Our relay's image non-storage does not mean that the entire infrastructure leaves no records.</p>
+<h2>5 Purchase information</h2>
+<p>Monthly and annual subscriptions use Apple's StoreKit. The app receives purchase status, expiration information, and related transaction data to verify and restore access. It caches this status locally. We do not receive your card number or Apple Account password.</p>
+<p>Section 4 describes transmission of purchase evidence to verify paid outline access. Apple processes the payment itself.</p>
+<h2>6 Sharing and Apple services</h2>
+<p>When you choose to share, the app passes images to the selected destination using iOS sharing or an Instagram handoff. The recipient's policies govern its handling. Deleting an image inside dolcam does not delete the recipient's copies.</p>
+<p>After export, iCloud Photos or other services may sync your photo library. Apple's settings also govern device backups. dolcam has no independent cloud sync service. Describing processing as local does not disable syncing you have configured.</p>
+<h2>7 Advertising and tracking</h2>
+<p>The app includes no advertising or tracking SDK and no usage analytics SDK. It does not track advertising identifiers or track you across other companies' apps. Functional records such as import counts are handled as described in section 4.</p>
+<p>The app saves first launch dates, successful save counts, and related information locally to decide when to request the operating system's standard review dialog. It does not send these decision records to our server. Review submission uses Apple's systems.</p>
+<p>The app uses onboarding completion, save counts, and records such as permission grants or declines to decide when to explain notifications. When notifications are enabled, it selects their content using poses you have photographed, saved pose collections, edited photo save counts, and paid access status. It determines notification dates from the last time you used the app and schedules them on your device through iOS local notifications.</p>
+<p>Notification scheduling and opening counts are saved as local operational records. The app also uses information such as the first launch date, past subscription status, and paid plan screen dismissal counts to select shortcuts shown when you press and hold the app icon. Usage records handled for these notification and shortcut features are processed only on your device. These features do not send those records to our servers or external services. Device backups and similar Apple features remain subject to your Apple settings as described in section 6.</p>
+<h2>8 Retention and deletion</h2>
+<h3>Local deletion</h3>
+<p>Local records remain until you delete them. We do not provide cloud sync. The temporary-file and history cleanup described below are exceptions.</p>
+<p>Deleting a Faves item removes its reduced-size photo, outline, name, and shot records from the app. The captured-photo deletion action in Settings removes the app's capture history, including stored originals where present. These actions do not remove photo library images. Delete exported copies in the Photos app.</p>
+<p>Capture history retained for correction re-editing remains until explicitly deleted. Other history may be removed when count or storage limits are reached. Temporary burst candidates are removed after saving and during other cleanup. Candidates older than 24 hours are cleaned up on a subsequent launch or use, rather than by an exact-time timer. Sharing files are cleaned up on the next share or app launch. There is no blanket 24-hour deletion rule for all photos.</p>
+<p>Deleting the app normally removes its ordinary local files and preferences. Manage backups and photo library copies separately. Keychain authentication credentials and server records are not necessarily deleted automatically.</p>
+<h3>Requests to delete server data</h3>
+<p>Contact <a href="mailto:rebirth.sakuraya@gmail.com">rebirth.sakuraya@gmail.com</a> about deleting import records or your anonymous account. We will explain what information is needed to identify the records. Do not email authentication tokens or Apple passwords. The app has no server account deletion button.</p>
+<p>Deleting an anonymous account deletes its corresponding usage counter. Request and cost ledger entries may remain with the account ID link removed. Deleting a local photo alone does not delete these server records.</p>
+<p>The relay retains anonymous IDs, import counts, and request records to manage allowances and prevent abuse. It does not store photos or outlines. You may request deletion of these records at the email address above. Infrastructure log and backup retention follow Supabase's terms. We retain support contact details and messages for as long as necessary to respond.</p>
+<p>Information independently retained by OpenAI or Apple follows their policies and applicable law. Local deletion does not imply immediate deletion from their systems.</p>
+<h2>9 Service providers and international processing</h2>
+<p>OpenAI (United States) creates outlines from Faves photos. Supabase (Singapore) provides authentication and relay infrastructure. The relay's processing region is Tokyo, Japan. Retention and other processing locations follow each provider's terms. We require each provider to offer protection equivalent to this Policy. Except as required or permitted by law, we do not provide information to third parties for purposes other than those described here. We do not sell personal information.</p>
+<p>The photos described in section 4 are sent to OpenAI in the United States of America (U.S.) as a provision to a third party in a foreign country. The U.S. has no comprehensive federal personal information protection law; personal information is protected by state laws and sector-specific laws. For an overview and details, refer to the <a href="https://www.ppc.go.jp/enforcement/infoprovision/laws/offshore_report_america/">Personal Information Protection Commission of Japan's survey of foreign personal information protection systems (U.S.)</a>.</p>
+<p>OpenAI's safeguards are based on its <a href="https://developers.openai.com/api/docs/guides/your-data">API data handling policy</a> and <a href="https://openai.com/enterprise-privacy/">business data privacy policy</a>. API data is not used for training unless explicitly shared for that purpose. OpenAI also applies encryption in transit and at rest and access controls.</p>
+<p>See Supabase's <a href="https://supabase.com/privacy">Privacy Policy</a> and <a href="https://supabase.com/legal/dpa">Data Processing Addendum</a> for its safeguards.</p>
+<h2>10 Security and support correspondence</h2>
+<p>Communication with the relay uses HTTPS. Keychain manages authentication sessions. Access controls protect server counters and ledgers. No transmission or storage method can be guaranteed completely secure.</p>
+<p>If you contact us, we receive your reply address and message. We use them as necessary to respond and verify requests. Do not send unnecessary photos or confidential information.</p>
+<h2>11 Children and information rights</h2>
+<p>The app is not intended for children under 13, who must not use it. Minors need parent or guardian consent. Contact <a href="mailto:rebirth.sakuraya@gmail.com">rebirth.sakuraya@gmail.com</a> if you believe we received information from a child under 13. We will investigate and take appropriate action, including deletion where necessary.</p>
+<p>Contact <a href="mailto:rebirth.sakuraya@gmail.com">rebirth.sakuraya@gmail.com</a> to request access, correction, deletion, or restriction of information we hold. We will verify requests as needed and respond under applicable law. If the anonymous account design limits our ability to identify the relevant records, we will explain that limitation.</p>
+<h2>12 Changes and governing law</h2>
+<p>We will announce material changes on the public page or through another appropriate channel and obtain renewed consent where necessary. This Policy is governed by Japanese law without limiting rights under other mandatory applicable laws.</p>
+<p>Operator: 桜谷俊輝<br />
+Address: Disclosed without delay upon request<br />
+Contact email: <a href="mailto:rebirth.sakuraya@gmail.com">rebirth.sakuraya@gmail.com</a></p>
+
+  <h2>Related Pages</h2>
+  <ul>
+    <li><a href="terms-en.html">Terms of Use</a></li>
+    <li><a href="support-en.html">Support</a></li>
+  </ul>
+</main>
+</body>
+</html>
